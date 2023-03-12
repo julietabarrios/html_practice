@@ -15,14 +15,14 @@ calc (2,"+")   //2
 calc (3,"-")   //3
 
 function calc(a,b,c) {
-    /*if (b=== undefined && c==="-") {
-        b===0;}
-    else if (b=== undefined && c==="+") {
-        b===0;}
-    else if (b=== undefined && c==="/") {
-        b===1;} 
-    else if (b=== undefined && c==="*") {
-        b===1;} */ 
+    if (c=== undefined){
+        if (b==="-" || b==='+'){
+            c=b;
+            b=0;}
+        else{
+            c=b;
+            b=1;}
+    }
     switch (c) {
         case "*":
             return a*b;
