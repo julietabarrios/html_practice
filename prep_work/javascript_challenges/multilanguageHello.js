@@ -74,7 +74,9 @@ function greeting(name, language){
         case "welsh":
             return "Croeso, " + name ;
         break;
+        case undefined:
+            return "Welcome, " + name;
+        break;
         }
 }
-
 
